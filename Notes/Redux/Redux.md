@@ -23,3 +23,28 @@
 
      1. Store:
         The store holds the application state. It is created using the *`createStore`* function from Redux.
+
+      ```javaScript
+
+        import {createStore} from 'redux';
+        const store = createStore(rootReducer);
+
+      ```
+
+     2. Actions:
+         Actions are plain JavaScript objects that describe what happened. They must have a type property indicating the action type. Optionally, they can have a payload property containing additional information.
+
+      ```javaScript
+        const ADD_TODO = 'ADD_TODO';
+        const addTodo = (text) => ({
+            type: ADD_TODO,
+            payload: { text }
+            });
+      ```
+
+     3. Reducers:
+        Reducers are pure functions that take the current state and an action, and return a new state. They must not mutate the state but instead return a new object.
+
+        ```javaScript
+
+        ```
