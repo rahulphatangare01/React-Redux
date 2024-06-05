@@ -47,4 +47,37 @@
 
         ```javaScript
 
+            const initialState = {
+            todos: []
+            };
+
+            const todoReducer = (state = initialState, action) => {
+            switch (action.type) {
+            case ADD_TODO:
+            return {
+            ...state,
+            todos: [...state.todos, action.payload.text]
+            };
+            default:
+            return state;
+            }
+            };
+
         ```
+     4. Dispatching Actions:
+         Actions are dispatched to the store using the dispatch method. This is how you trigger a state change.
+
+
+      ```javaScript
+      store.dispatch(addTodo('Learn Redux'));
+
+      ```
+     5. Selectors:
+     Selectors are functions that extract specific pieces of state. They help in organizing how the state is accessed.
+
+```javaScript
+
+          const getTodos = (state) => state.todos;
+
+
+```
