@@ -81,3 +81,5 @@
 
 
 ```
+
+## Implementation of Redux
